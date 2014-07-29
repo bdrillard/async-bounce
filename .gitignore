@@ -8,4 +8,4 @@ pom.xml.asc
 /.lein-*
 /.nrepl-port
 /resources/public/js/*.js
-.DS_store
+.DS_Store
