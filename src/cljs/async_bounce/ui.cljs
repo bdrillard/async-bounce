@@ -19,7 +19,11 @@
 (defn draw-circle [obj]
   (let [{:keys [x y r c]} obj]
     (when-not (nil? obj)
-      '())
+      (.beginPath context)
+      (.arc context x y r 0 (* 2 Math/PI))
+      (set! (.-fillStyle context) c)
+      (.fill context)
+      (.closePath context))))
 
 (defn get-coords [evt]
   {:x (:clientX evt) 
